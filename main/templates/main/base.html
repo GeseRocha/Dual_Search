@@ -9,13 +9,14 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-{#    <link rel="stylesheet" href="{% static 'main' %}">#}
+    <link rel="stylesheet" href="{{ STATIC_URL }}dual_search.css">
 
 
 </head>
 <body>
     <div>
-        <h1>Dual Search</h1>
+        <h1 id="front-page-title">Dual Search</h1>
+        {% include 'main/search_form.html' %}
     </div>
 
     <div id="content", name="content">

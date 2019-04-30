@@ -1,0 +1,6 @@
+{% block search_form %}
+<form id="search-form" action="{% url 'google-search-view' %}" method="get">
+{#    <label for="search-input">{{ label|default:"Enter Search Terms" }}</label>#}
+    {% block search_form_input %}<input type="text" name="q" id="search-input" placeholder="Search">{% endblock %}
+</form>
+{% endblock %}
