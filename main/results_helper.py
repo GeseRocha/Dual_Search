@@ -15,6 +15,8 @@ class SearchResults(dict):
     total_results = 0
     search_terms = ''
 
+
+
     def __init__(self, dict={}):
         super(SearchResults, self).__init__(dict)
 

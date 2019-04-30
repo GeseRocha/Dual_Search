@@ -1,0 +1,26 @@
+{% extends 'main/base.html' %}
+{% load search_tags %}
+
+{% block content %}
+    <h3 class="results-message">We found <b>{{ total_results }}</b> result{{ total_results|pluralize }} for <b class="search-terms">{{ search_terms }}</b></h3>
+    <div>
+        <ul class="search-results">
+        {% for item in items %}
+            <li>
+                <h5>{{ item.title }}</h5>
+                <p>{{ item.snippet }}</p>
+                <a class="orange-arrow-link" href="{{ item.link }}" >Read more</a>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+
+    <div class="pagination">
+        {% show_pagination %}
+    </div>
+
+
+
+{% endblock %}
+
+
