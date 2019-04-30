@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'main'
+    'main',
 ]
 
 MIDDLEWARE = [
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'Dual_Search.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'main/../templates')]
+        'DIRS': [os.path.join(BASE_DIR, 'main/../main/templates')]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -119,12 +119,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
+
 STATIC_URL = '/static/'
 
 STATICFILES_DIR = (
-    os.path.join(BASE_DIR, 'main/../static'),
+    os.path.join(BASE_DIR, 'main/static'),
+    '/home/gese/PycharmProjects/Dual_Search/main/static'
 )
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
