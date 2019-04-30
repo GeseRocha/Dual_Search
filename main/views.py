@@ -23,14 +23,29 @@ class SearchView(TemplateView):
         service = build("customsearch", "v1",
                         developerKey=google_api_key)
 
-        res = service.cse().list(
-            q=self.request.GET.get('q', ''),
-            start=self.page_to_index(),
-            cx=google_engine_id,
-        ).execute()
+        try:
+            res = service.cse().list(
+                q=self.request.GET.get('q', ''),
+                start=self.page_to_index(),
+                cx=google_engine_id,
+            ).execute()
 
-        pages = self.calculate_pages()
-        res = SearchResults(res)
+            pages = self.calculate_pages()
+            res = SearchResults(res)
+
+        except:
+
+            res = service.cse().list(
+                q=self.request.GET.get('q', ''),
+                start=1,
+                cx=google_engine_id,
+            ).execute()
+
+            page = 1
+            pages = [0, 1, 2]
+
+            res = SearchResults(res)
+
 
 
 
