@@ -1,4 +1,20 @@
-#front-page-title {
-    color: darkred;
-    background: black;
+
+.form-control-borderless {
+    border: none;
+}
+
+.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+#search-bar-btn{
+    background-color: dodgerblue;
+    border-color: dodgerblue;
+}
+
+#search-bar-btn:hover{
+    background-color: steelblue;
+    box-shadow: 0 10px 12px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }

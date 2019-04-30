@@ -1,6 +1,23 @@
-{% block search_form %}
-<form id="search-form" action="{% url 'google-search-view' %}" method="get">
-{#    <label for="search-input">{{ label|default:"Enter Search Terms" }}</label>#}
-    {% block search_form_input %}<input type="text" name="q" id="search-input" placeholder="Search">{% endblock %}
-</form>
+{% block search_bar %}
+<div id="test-container" class="container">
+    <br/>
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8">
+            <form class="card card-sm" action="{% url 'google-search-view' %}" method="get">
+                <div class="card-body row no-gutters align-items-center">
+                    <div class="col-auto">
+                        <i class="fas fa-search h4 text-body"></i>
+                    </div>
+                    <div class="col">
+                        <input class="form-control form-control-lg form-control-borderless"
+                                                            type="text" name="q" id="search-input" placeholder="Search">
+                    </div>
+                    <div class="col-auto">
+                        <button id="search-bar-btn" class="btn btn-lg btn-success" type="submit">Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}
