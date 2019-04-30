@@ -55,7 +55,7 @@ ROOT_URLCONF = 'Dual_Search.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'main/templates')]
+        'DIRS': [os.path.join(BASE_DIR, 'main/../templates')]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -122,7 +122,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIR = (
-    os.path.join(BASE_DIR, 'main/static'),
+    os.path.join(BASE_DIR, 'main/../static'),
 )
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
